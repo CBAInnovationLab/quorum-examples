@@ -1,0 +1,17 @@
+#!/bin/sh
+
+cd /root/quorum
+export GETH_ARGS="--datadir /root/quorum --raft --rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum"
+export PRIVATE_CONFIG=constellation.conf
+
+echo "[*] Waiting for Constellation to start"
+sleep 5
+
+if [ ! -f /root/quorum/initialised ]; then
+    echo "[*] Initialising genesis"
+    /usr/local/bin/geth $GETH_ARGS init genesis.json
+    touch /root/quorum/initialised
+fi
+
+echo "[*] Starting Quorum"
+exec /usr/local/bin/geth $GETH_ARGS

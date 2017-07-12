@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd /root/quorum
+echo "[*] Starting Constellation"
+exec /usr/local/bin/constellation-node constellation.conf
