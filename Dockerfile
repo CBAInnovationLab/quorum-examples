@@ -25,7 +25,7 @@ RUN GO_RELEASE=go1.7.3.linux-amd64.tar.gz                                       
 
 # Clone Quorum and build binaries
     # => Build will be based on version 1.1.0
-    git clone --depth 1 --branch v1.1.0 https://github.com/jpmorganchase/quorum.git     && \
+    git clone --depth 1 https://github.com/jpmorganchase/quorum.git     && \
     cd quorum                                                                           && \
     make all                                                                            && \
     # => Copy geth & bootnode binaries & Delete repo
