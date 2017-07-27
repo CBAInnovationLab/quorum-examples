@@ -2,7 +2,7 @@
 /node*/constellation/node.ipc
 /node*/geth/*
 !/node*/geth/nodekey
-/node*/keystore
+!/node*/keystore
 /node*/quorum-raft-state
 /node*/raft-snap
 /node*/raft-wal
