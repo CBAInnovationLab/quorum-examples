@@ -1,8 +1,8 @@
 version: "2.0"
 services:
   node-1:
-    build: ../../
-    image: cbainnovationlab/quorum
+    #build: ../../
+    image: quorum
     ports:
       - "8545:8545"
     volumes:
@@ -13,8 +13,8 @@ services:
         aliases:
           - node-1
   node-2:
-    build: ../../
-    image: cbainnovationlab/quorum
+    #build: ../../
+    image: quorum
     volumes:
       - ./node2:/root/quorum
     networks:
@@ -23,8 +23,8 @@ services:
         aliases:
           - node-2
   node-3:
-    build: ../../
-    image: cbainnovationlab/quorum
+    #build: ../../
+    image: quorum
     volumes:
       - ./node3:/root/quorum
     networks:
@@ -33,8 +33,8 @@ services:
         aliases:
           - node-3
   node-4:
-    build: ../../
-    image: cbainnovationlab/quorum
+    #build: ../../
+    image: quorum
     volumes:
       - ./node4:/root/quorum
     networks:
@@ -43,8 +43,8 @@ services:
         aliases:
           - node-4
   node-5:
-    build: ../../
-    image: cbainnovationlab/quorum
+    #build: ../../
+    image: quorum
     volumes:
       - ./node5:/root/quorum
     networks:
@@ -53,8 +53,8 @@ services:
         aliases:
           - node-5
   node-6:
-    build: ../../
-    image: cbainnovationlab/quorum
+    #build: ../../
+    image: quorum
     volumes:
       - ./node6:/root/quorum
     networks:
@@ -63,8 +63,8 @@ services:
         aliases:
           - node-6
   node-7:
-    build: ../../
-    image: cbainnovationlab/quorum
+    #build: ../../
+    image: quorum
     volumes:
       - ./node7:/root/quorum
     networks:
